@@ -26,6 +26,10 @@ header {
   padding: 10px;
   display: flex;
   place-content: center flex-end; /*align-content + justify-content*/
+  position: sticky;
+  top: 0;
+  z-index: 1; /*é como se fosse as camadas do photoshop, 0 é o padrão*/
+  
 }
 
 #menu > ul {
