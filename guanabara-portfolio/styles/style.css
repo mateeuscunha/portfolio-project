@@ -32,8 +32,6 @@ body {
   color: var(--texto);
 }
 
-/*HEADER --- BEGIN*/
-
 header {
   background-color: var(--destaque);
   color: var(--texto);
@@ -43,6 +41,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1; /*é como se fosse as camadas do photoshop, 0 é o padrão*/
+  
 }
 
 #menu > ul {
@@ -64,9 +63,6 @@ header {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
-
-/*HEADER --- END*/
-/*MAIN --- BEGIN*/
 
 main {
   display: grid;
@@ -119,8 +115,6 @@ div#social a:hover {
   color: var(--destaque-inverso);
 }
 
-/*ficha end*/
-
 #detalhes {
   grid-column: 2;
 }
@@ -136,8 +130,6 @@ article h2 {
   color: var(--destaque);
   margin-bottom: 20px;
 }
-
-/*general configs of detalhes*/
 
 #video div.video-container {
   position: relative;
@@ -155,8 +147,6 @@ article h2 {
   height: 100%;
   border-radius: 8px;
 }
-
-/*video end*/
 
 #skill-container {
   display: grid;
@@ -193,8 +183,6 @@ article h2 {
   border-radius: 4px;
 }
 
-/*skills end*/
-
 #formacao-container {
   display: flex;
   flex-flow: column-reverse nowrap;
@@ -203,8 +191,8 @@ article h2 {
 
 #formacao-container .curso {
   background-color: var(--fundo-principal);
-  border-radius: 5px;
-  border-left: 5px solid var(--destaque-inverso); /*border just in the left side*/
+  border-radius: 5px; /*border just in the left side*/
+  border-left: 5px solid var(--destaque-inverso);
   padding-left: 10px;
   transition: border-width .4s, border-color .4s;
 }
@@ -213,10 +201,6 @@ article h2 {
   border-left-width: 15px;
   border-color: var(--destaque);
   cursor: pointer;
-}
-
-#formacao-container .curso:hover .instituicao { /*to switch the h3 color too*/
-  color: var(--destaque);
 }
 
 #formacao-container .periodo {
@@ -228,10 +212,7 @@ article h2 {
 #formacao-container .instituicao {
   color: var(--destaque-inverso);
   font-size: 1.3em;
-  transition: color .4s;
 }
-
-/*formacao end*/
 
 #enem-container {
   display: flex;
@@ -239,52 +220,29 @@ article h2 {
   gap: 20px;
 }
 
-#enem-container div.midia {
+#enem-container > div {
   background-color: var(--fundo-principal);
   border-radius: 8px;
   padding: 15px;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
+  gap: 10px;
   flex: 1;
-  width: 100%;
-}
-
-#enem-container .molde {
-  width: 70%;
-  aspect-ratio: 1350/1688;
-  padding: 8px;
-  overflow: hidden;
 }
 
 #enem-container .foto {
-  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-  transition: transform .4s ease;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-#enem-container span {
-  display: block;
+#enem-container .enemtxt {
+  text-align: center;
   font-weight: bold;
   color: var(--destaque);
 }
-
-#enem-container a {
-  text-decoration: none;
-}
-
-#enem-container a:hover span {
-  color: var(--destaque-inverso);
-}
-
-#enem-container a:hover .foto {
-  transform: scale(1.05);
-}
-
-/*enem end*/
 
 #projeto-container {
   display: flex;
@@ -317,9 +275,6 @@ article h2 {
   border-radius: 8px;
 }
 
-/*MAIN --- END*/
-/*FOOTER --- BEGIN*/
-
 footer {
   background-color: var(--destaque);
   color: var(--texto-inverso);
@@ -337,13 +292,8 @@ footer a:hover {
   color: var(--destaque-inverso);
 }
 
-/*FOOTER --- END*/
 
 @media screen and (min-width: 768px) { /*bigger screens*/
-  header a#casa {
-    display: none;
-  }
-  
   main {
     grid-template-columns: auto 300px 1fr auto;
   }
