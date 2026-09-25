@@ -159,38 +159,53 @@ article h2 {
 /*video end*/
 
 #skill-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
 }
 
-#skill-container .info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#skill-container .typeskills {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+    align-items: center;
+    background-color: var(--fundo-principal);
+    border-radius: 5px;
+    padding: 10px;
 }
 
-#skill-container .nome {
-  font-weight: bold;
-  color: var(--texto);
+#skill-container h3 {
+    background-color: var(--destaque-inverso);
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    text-align: center;
+    font-size: 1.5em;
+    grid-row: 1;
 }
 
-#skill-container .porcent {
-  font-weight: bold;
-  color: var(--destaque);
+#skill-container .fields {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
-#skill-container .barra {
-  width: 100%;
-  height: 8px;
-  background-color: var(--fundo-principal);
-  border-radius: 4px;
+
+#skill-container .field li {
+    margin-left: 5px;
+    font-size: 0.95em;
 }
 
-#skill-container .progresso {
-  height: 100%;
-  background-color: var(--destaque-inverso);
-  border-radius: 4px;
+#skill-container summary {
+    color: var(--destaque-inverso);
+    cursor: pointer;
+}
+
+#skill-container ul {
+    list-style-type: none;
+    margin-left: 10px;
 }
 
 /*skills end*/
