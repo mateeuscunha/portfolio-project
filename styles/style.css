@@ -159,53 +159,53 @@ article h2 {
 /*video end*/
 
 #skill-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
 }
 
 #skill-container .typeskills {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 25px;
-    align-items: center;
-    background-color: var(--fundo-principal);
-    border-radius: 5px;
-    padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 25px;
+  align-items: center;
+  background-color: var(--fundo-principal);
+  border-radius: 5px;
+  padding: 10px;
 }
 
 #skill-container h3 {
-    background-color: var(--destaque-inverso);
-    border-radius: 5px;
-    padding: 10px;
-    width: fit-content;
-    text-align: center;
-    font-size: 1.5em;
-    grid-row: 1;
+  background-color: var(--destaque-inverso);
+  border-radius: 5px;
+  padding: 10px;
+  width: fit-content;
+  text-align: center;
+  font-size: 1.5em;
+  grid-row: 1;
 }
 
 #skill-container .fields {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 
 #skill-container .field li {
-    margin-left: 5px;
-    font-size: 0.95em;
+  margin-left: 5px;
+  font-size: 0.95em;
 }
 
 #skill-container summary {
-    color: var(--destaque-inverso);
-    cursor: pointer;
+  color: var(--destaque-inverso);
+  cursor: pointer;
 }
 
 #skill-container ul {
-    list-style-type: none;
-    margin-left: 10px;
+  list-style-type: none;
+  margin-left: 10px;
 }
 
 /*skills end*/
@@ -307,6 +307,11 @@ article h2 {
   gap: 20px;
 }
 
+#projeto-container > a {
+  text-decoration: none;
+  color: var(--texto);
+}
+
 #projeto-container .projeto {
   display: flex;
   flex-direction: column;
@@ -322,6 +327,25 @@ article h2 {
   border-color: var(--destaque);
   border-left-width: 15px;
   cursor: pointer;
+}
+
+#projeto-container .projeto-info {
+  width: 100%;
+}
+
+#projeto-container .projeto-info p {
+  font-size: 0.95em;
+}
+
+#projeto-container .projeto-info summary {
+  background-color: var(--destaque-inverso);
+  border-radius: 5px;
+  text-align: center;
+  padding: 2px;
+}
+
+#projeto-container .projeto-info summary:hover {
+  background-color: var(--destaque);
 }
 
 #projeto-container .foto {
@@ -389,6 +413,10 @@ footer a:hover {
 
   #projeto-container .projeto-info {
     max-width: 80%;
+  }
+
+  #projeto-container .projeto summary {
+    width: 40%;
   }
 
   #projeto-container .foto {
