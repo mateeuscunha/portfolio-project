@@ -338,7 +338,8 @@ article h2 {
 }
 
 #projeto-container .projeto-info summary {
-  background-color: var(--destaque-inverso);
+  color: var(--destaque-inverso);
+  border: 1px solid var(--texto);
   border-radius: 5px;
   text-align: center;
   padding: 2px;
