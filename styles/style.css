@@ -254,7 +254,7 @@ article h2 {
   gap: 20px;
 }
 
-#enem-container div.midia {
+#enem-container div.conquista {
   background-color: var(--fundo-principal);
   border-radius: 8px;
   padding: 15px;
@@ -267,6 +267,7 @@ article h2 {
 
 #enem-container .molde {
   width: 70%;
+  max-width: 380px;
   aspect-ratio: 1350/1688;
   padding: 8px;
   overflow: hidden;
@@ -343,6 +344,7 @@ article h2 {
   border-radius: 5px;
   text-align: center;
   padding: 2px;
+  font-size: 0.95em;
 }
 
 #projeto-container .projeto-info summary:hover {
@@ -379,7 +381,7 @@ footer a:hover {
 
 /*FOOTER --- END*/
 
-@media screen and (min-width: 768px) { /*bigger screens*/
+@media screen and (min-width: 1000px) { /*bigger screens*/
   header a#casa {
     display: none;
   }
@@ -404,8 +406,9 @@ footer a:hover {
   }
 
   #enem-container {
-  flex-direction: row;
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  }
 
   #projeto-container .projeto {
     flex-direction: row-reverse;
