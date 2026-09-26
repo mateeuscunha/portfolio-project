@@ -201,6 +201,11 @@ article h2 {
 #skill-container summary {
   color: var(--destaque-inverso);
   cursor: pointer;
+  width: fit-content;
+}
+
+#skill-container summary:hover {
+  color: var(--destaque);
 }
 
 #skill-container ul {
@@ -248,10 +253,55 @@ article h2 {
 
 /*formacao end*/
 
+#experiencias-container {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  gap: 20px;
+}
+
+#experiencias-container .experiencia {
+   background-color: var(--fundo-principal);
+  border-radius: 5px;
+  border-left: 5px solid var(--destaque-inverso); /*border just in the left side*/
+  padding-left: 10px;
+  transition: border-width .4s, border-color .4s;
+}
+
+#experiencias-container .experiencia:hover {
+  border-left-width: 15px;
+  border-color: var(--destaque);
+  cursor: pointer;
+}
+
+#experiencias-container .experiencia:hover .tipo-experiencia {
+  color: var(--destaque);
+}
+
+#experiencias-container .tipo-experiencia {
+  color: var(--destaque-inverso);
+  font-size: 1.3em;
+  transition: color .4s;
+  padding-bottom: 10px;
+}
+
+#experiencias-container .periodo {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#experiencias-container .relato {
+  font-size: 0.95em;
+  line-height: 20px;
+}
+
+/*experiencias end*/
+
 #enem-container {
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
+  text-align: center;
 }
 
 #enem-container div.conquista {
@@ -366,16 +416,33 @@ footer {
   background-color: var(--destaque);
   color: var(--texto-inverso);
   text-align: center;
-  padding: 15px;
+  padding: 20px;
 }
 
-footer a {
-  color: var(--texto-inverso);
-  text-decoration: none;
-  font-weight: bold;
+footer div#social a {
+  color: var(--texto);
 }
 
-footer a:hover {
+footer div#social {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+div#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  gap: 1em;
+  margin-top: 15px;
+}
+
+div#social a {
+  color: var(--destaque);
+  transition: color .5s;
+}
+
+footer div#social a:hover {
   color: var(--destaque-inverso);
 }
 
@@ -408,6 +475,10 @@ footer a:hover {
   #enem-container {
   display: grid;
   grid-template-columns: 1fr 1fr ;
+  }
+
+  #enem-container .molde {
+    max-width: 30%;
   }
 
   #projeto-container .projeto {
